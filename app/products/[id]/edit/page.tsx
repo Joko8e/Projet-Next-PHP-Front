@@ -190,6 +190,11 @@ function EditProductContent() {
 }
 
 export default function UpdateProductPage() {
+
+    //En utilisant <Suspense>, tu dis à Next.js : "Afficher un fallback (un message de chargement) 
+    // le temps que les paramètres de l'URL soient disponibles pour le composant client".
+    // Cela lève le blocage du prerender.
+
     return (
         <Suspense fallback={<div className="text-center mt-10">Chargement de la page...</div>}>
             <EditProductContent/>
