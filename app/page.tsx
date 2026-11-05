@@ -13,7 +13,7 @@ export default function Home() {
                 </p>
 
                 <div className="pt-4">
-                    {/* Le composant Link de Next.js permet une navigation fluide côté client (Single Page Application) */}
+                    {/* Le composant Link de Next.js permet une navigation fluide côté client*/}
                     <Link
                         href="/products"
                         className="inline-block bg-blue-600 text-white font-medium px-8 py-3 rounded-xl shadow hover:bg-blue-700 transition"

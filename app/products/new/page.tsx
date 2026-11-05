@@ -4,6 +4,7 @@ import React from "react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { api } from "@/lib/axios";
+import Link from "next/link";
 
 export default function NewProductPage() {
     const router = useRouter();
@@ -70,6 +71,15 @@ export default function NewProductPage() {
     
     return (
     <main className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
+        {/* Lien de retour vers le catalogue */}
+        <div className="mb-4">
+          <Link 
+            href="/products" 
+            className="text-blue-600 hover:underline text-sm font-medium inline-flex items-center gap-1"
+          >
+              ← Retour au catalogue
+          </Link>
+        </div>
       <h1 className="text-2xl font-bold mb-6">Ajouter un nouveau produit</h1>
       
         {/* Si une erreur est présente, on affiche un encadré rouge stylisé avec le message */}
