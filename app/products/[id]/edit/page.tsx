@@ -52,8 +52,12 @@ export default function UpdateProductPage() {
     }, [productId]);
 
     // Gestion des changements dans les inputs du formulaire
+    //Fonction unique pour gérer la saisie de tous les champs du formulaire (input et textarea)
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        setFormData({
+            ...formData, // copie de l'ancien état du formulaire
+            [e.target.name]: e.target.value // on met à jour la propriété ciblée par son attribut 'name'
+        });
     };
 
     // 2. Soumission du formulaire de mise à jour
