@@ -69,7 +69,17 @@ export default function ProductsPage() {
   return (
     <main className="max-w-7xl mx-auto p-6">
             <div className="flex justify-between items-center mb-8">
+                
+                <div className="flex items-center gap-4">
+                {/* Bouton de retour vers l'accueil */}
+                  <Link 
+                    href="/" 
+                    className="bg-gray-200 text-gray-700 px-3 py-2 rounded-md hover:bg-gray-300 transition text-sm font-medium"
+                  >
+                    ← Accueil
+                  </Link>
                 <h1 className="text-3xl font-bold">Catalogue de la Boutique</h1>
+                </div>
                 <Link 
                     href="/products/new" 
                     className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
