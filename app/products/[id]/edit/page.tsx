@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { api } from "@/lib/axios";
 import Link from "next/link";
 
-export default function UpdateProductPage() {
+function EditProductContent() {
     const router = useRouter();
     const params = useParams();
     const productId = params.id;
@@ -187,4 +187,12 @@ export default function UpdateProductPage() {
             </form>
         </main>
     );
+}
+
+export default function UpdateProductPage() {
+    return (
+        <Suspense fallback={<div className="text-center mt-10">Chargement de la page...</div>}>
+            <EditProductContent/>
+        </Suspense>
+    )
 }
