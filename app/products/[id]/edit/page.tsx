@@ -1,8 +1,5 @@
 'use client';
 
-// Force Next.js à traiter cette page comme dynamique pour éviter l'erreur de prerender
-export const dynamic = 'force-dynamic';
-
 import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { api } from "@/lib/axios";
